@@ -1,0 +1,4 @@
+- Styling
+
+- Private and Public ChatRooms
+- Images Sent Feature

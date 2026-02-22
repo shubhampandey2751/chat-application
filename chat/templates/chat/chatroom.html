@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/chatroom.css' %}">
+{% endblock links %}
+
+{% block content %}
+
+<div class="main-body" id="main-body">
+  <section class="msger">
+      <header class="msger-header">
+        <div class="msger-header-title">
+          <i class="fas fa-comment-alt"></i> <span id="room-name">{{room_name|title}}</span>
+        </div>
+      </header>
+  
+      <main class="msger-chat" id="chat-log">
+      </main>
+  
+      <!-- Message Input Form-->
+      <form class="msger-inputarea" id="message-form">
+        <input type="text" class="msger-input" id="message" placeholder="Enter your message...">
+        <button type="submit" class="msger-send-btn">Send</button>
+      </form>
+    </section>
+</div>
+
+
+
+<script src="{% static 'js/chat.js' %}"></script>
+
+{% endblock content %}
